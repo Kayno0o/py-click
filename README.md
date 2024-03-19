@@ -1,14 +1,17 @@
 # setup
 
 ```bash
-sudo cp clicklog.python.service /etc/systemd/system/clicklog.python.service
-sudo systemctl enable --now clicklog.python.service
+make setup
 ```
 
 # update
 
 ```bash
-git pull
-sudo cp clicklog.python.service /etc/systemd/system/clicklog.python.service
-sudo systemctl restart clicklog.python.service
+make update
+```
+
+# stop
+
+```bash
+make stop
 ```
