@@ -2,6 +2,7 @@ import os
 import json
 import matplotlib.pyplot as plt
 from datetime import datetime
+from filename import get_reports_dir
 
 
 def load_json_data(directory):
@@ -55,7 +56,8 @@ def plot_fields(ax, json_data, fields, name):
 
 
 if __name__ == "__main__":
-    directory = "./reports"
+    directory = get_reports_dir()
+    print(directory)
     json_data = load_json_data(directory)
 
     fig, axs = plt.subplots(2, 2, figsize=(12, 10))

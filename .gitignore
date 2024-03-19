@@ -1,4 +1,5 @@
 *.json
-reports
-charts
+reports/
+charts/
 *.service
+__pycache__/

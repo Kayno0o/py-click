@@ -1,7 +1,6 @@
 #!/bin/bash
 
 # Set variables
-USER="$1"
 PWD=$(pwd)
 SERVICE_FILE="clicklog.python.service"
 DEST_PATH="./$SERVICE_FILE"
