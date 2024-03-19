@@ -1,0 +1,15 @@
+[Unit]
+Description=Your Service Description
+After=display-manager.service
+
+[Service]
+Type=simple
+Environment="DISPLAY=:0"
+ExecStart=/usr/bin/python3 /home/kfyleyssant/Documents/github/py-click/main.py
+Restart=always
+RestartSec=3
+User=kfyleyssant
+Environment="XAUTHORITY=/home/kfyleyssant/.Xauthority"
+
+[Install]
+WantedBy=multi-user.target
