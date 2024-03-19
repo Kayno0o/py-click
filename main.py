@@ -32,7 +32,7 @@ def euclidean_distance(point1, point2):
 def get_log_file_name():
     now = datetime.now()
     return (
-        "/home/kfyleyssant/Documents/github/py-click/"
+        "/home/kfyleyssant/Documents/github/py-click/reports/"
         + now.strftime("%Y-%m-%d")
         + ".json"
     )
