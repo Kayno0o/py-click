@@ -9,3 +9,6 @@ update:
 	sudo cp clicklog.python.service /etc/systemd/system/clicklog.python.service
 	sudo systemctl daemon-reload
 	sudo systemctl restart clicklog.python.service
+
+stop:
+	sudo systemctl stop clicklog.python.service
