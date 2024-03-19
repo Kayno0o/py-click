@@ -1,3 +1,4 @@
 *.json
 reports
 charts
+*.service

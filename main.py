@@ -4,9 +4,9 @@ from pynput.mouse import Listener as MouseListener
 from pynput.mouse import Button
 from pynput.keyboard import Listener as KeyboardListener
 import time
-from datetime import datetime
 import json
 import math
+from filename import get_log_file_name
 
 last_pos = (0, 0)
 
@@ -27,15 +27,6 @@ def euclidean_distance(point1, point2):
     x1, y1 = point1
     x2, y2 = point2
     return math.sqrt((x2 - x1) ** 2 + (y2 - y1) ** 2)
-
-
-def get_log_file_name():
-    now = datetime.now()
-    return (
-        "/home/kfyleyssant/Documents/github/py-click/reports/"
-        + now.strftime("%Y-%m-%d")
-        + ".json"
-    )
 
 
 def load_log():

@@ -2,6 +2,7 @@ import os
 import json
 import matplotlib.pyplot as plt
 import sys
+from filename import get_reports_dir
 
 
 def load_json_data(directory):
@@ -68,13 +69,13 @@ if __name__ == "__main__":
     field_names = sys.argv[1:]
 
     # Specify the directory containing reports
-    directory = "./reports"
+    directory = get_reports_dir()
 
     # Load JSON data
     json_data = load_json_data(directory)
 
     # Specify the save path
-    save_path = os.path.join("charts", "_".join(field_names) + ".png")
+    save_path = os.path.join(directory, "charts", "_".join(field_names) + ".png")
 
     # Plot specified fields and save if save path is provided
     plot_fields(json_data, field_names, save_path)
