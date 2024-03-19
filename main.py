@@ -73,7 +73,6 @@ def on_key_press(key):
 def on_mouse_move(x, y):
     global data, last_pos
     pos = (x, y)
-    print(euclidean_distance(last_pos, pos), last_pos, pos)
     data["total_distance"] = round(
         data["total_distance"] + abs(euclidean_distance(last_pos, pos)), 2
     )
@@ -88,7 +87,6 @@ def signal_handler(sig, frame):
 
 def on_scroll(_x, _y, directionX, directionY):
     global data
-    print(directionX, directionY)
     if directionY == -1:
         data["scroll_down"] += 1
     if directionY == 1:
