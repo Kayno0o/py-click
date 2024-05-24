@@ -16,3 +16,6 @@ update:
 
 stop:
 	sudo systemctl stop clicklog.python.service
+
+start:
+	sudo systemctl start clicklog.python.service
